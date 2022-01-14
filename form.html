@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+       *{
+           margin:0cm;
+           padding:0cm;
+       } 
+       label{
+           background: rgb(240, 162, 162);
+       }
+       h1{
+           text-align: center;
+       }
+       body{
+        background: url(https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg);
+            background-size:200%; 
+          
+        }
+        div{
+            text-align: left;
+        position:centre ;
+            margin-left: 10%;
+        }
+        button :hover{
+            background: red;
+        }
+        #submit:hover{
+            background-color:yellow
+        }
+        label{
+            text-emphasis-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div> <h1> GOURAV FORM</h1> </div>
+    <BR>
+    <div> 
+    <form onsubmit="return validation();">
+        <div class="form">
+    <label>NAME        :<label>
+        <br>
+     <input type="text" name="name" id="name"> 
+    </div>
+    <br>
+    <div>
+    <label>EMAIL:</label>
+    <br>
+    <input type="email" name="email" id="email" >
+    </div>
+    <br>
+    <div>
+    <label>PASSWORD:</label>
+    <br>
+    <input type="password" name="password" id="password" >
+    </div>
+    <br>
+    <div><label>RE-TYPEPASS:</label>
+    <BR>
+    <input type="password" name="re password" id="re password">
+    </div>
+    <br>
+    <div>
+    <label>ADDRESS :</label>
+    <BR>
+    <input type="text" name="address" id="address">
+    </div>
+    <br>
+    <div>
+    <label>PINCODE :</label>
+    <BR>
+    <input type="number" name="pincode" id="pincode">
+    </div>
+    <br>
+    <div>
+     <label>PHONE NO. :</label>
+    <BR>
+    <input type="number" name="phone no." id="phone no.">
+    </div>
+    <br>
+    <div>
+        <label> USERNAME :</label>
+        <BR>
+   :<input type="text" name="username" id="username">
+    </div>
+    <br>
+    <div>
+     <label>PROFIL PIC:</label>
+     <BR>
+    <input type="file" name="url" id="url">
+    </div>
+    <br>
+    <div>
+    <label>SUBMIT:</label><BR>
+    <input type="submit" name="submit" id="submit">
+    <button><a href="http://127.0.0.1:5500/gourav.html" target="not found">back </a></button>
+    </div>
+</div></div>
+</form>
+<script type="text/javascript">
+    function validation()
+    {
+        chkname();
+        chkmail();
+        chkphone();
+        chkadd();
+        chkpin();
+    }
+        function chkphone(){
+        var phone=document.getElementById("phone no.").value;
+        if(phone.length<10 || phone.length>10)
+            {
+                alert("Incorrect phone number!");
+            }
+            if(phone==null)
+            alert("Please enter phone number!");
+    }
+    function chkpin(){
+        var pincode=document.getElementById("pincode").value;
+        
+        if(pincode.length<6 || pincode.length>6)
+            {
+                alert("Please enter correct pincode! ");
+            }
+            if(pincode==null)
+            alert("Please enter pincode!");
+    }
+    function chkname()
+    {
+        var name=document.getElementById("name").value;
+        if(name==null)
+        alert("Pleaser Enter name!");
+    }
+    function chkmail(){
+        var mail=document.getElementById("email").value; 
+        if(mail==null)
+        alert("Please Enter mail address!");
+    }
+    function chkadd(){
+        var add=document.getElementById("address").value;
+        if(add==null)
+        alert("Please enter address!");
+    }
+    </script>
+</body>
+</html>
